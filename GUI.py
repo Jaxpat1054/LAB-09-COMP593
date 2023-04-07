@@ -39,7 +39,9 @@ def handle_get_info_btn_click():
 
     #Populate the info values
     lbl_height_value['text'] = f"{poke_info['height']} dm"
-
+    lbl_weight_value['text'] = f"{poke_info['weight']} hg"
+    #for a in poke_info['abilities']['ability']['name']:
+    #    lbl_types_values['text'] = f"{a}"
     prg_hp['value'] = poke_info['stats'][0]['base_stat']
     prg_attack['value'] = poke_info['stats'][1]['base_stat']
     prg_defense['value'] =  poke_info['stats'][2]['base_stat']
@@ -54,9 +56,18 @@ btn_get_info.grid(row=0, column=2)
 #Add widget to bottom left frame
 lbl_height = ttk.Label(frm_btm_left, text='Height:')
 lbl_height.grid(row=0, column=0, sticky=E)
-
 lbl_height_value = ttk.Label(frm_btm_left, text='TBD')
 lbl_height_value.grid(row=0, column=1)
+
+lbl_weight = ttk.Label(frm_btm_left, text='Weight:')
+lbl_weight.grid(row=1, column=0, sticky=E)
+lbl_weight_value = ttk.Label(frm_btm_left, text='TBD')
+lbl_weight_value.grid(row=1, column=1)
+
+lbl_types = ttk.Label(frm_btm_left, text='Types:')
+lbl_types.grid(row=2, column=0)
+lbl_types_values = ttk.Label(frm_btm_left, text='TBD')
+lbl_types_values.grid(row=2, column=1)
 
 #Add widget to bottom right frame
 lbl_hp = ttk.Label(frm_btm_right, text='HP:')

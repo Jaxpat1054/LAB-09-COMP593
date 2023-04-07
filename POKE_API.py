@@ -8,7 +8,7 @@ POKE_API_URL = 'https://pokeapi.co/api/v2/pokemon/'
  
 def get_pokemon_info(pokemon):
     """Gets information about a specified Pokemon from the PokeAPI.
- 
+
     Args:
         pokemon (str): Pokemon name (or Pokedex number)
  
