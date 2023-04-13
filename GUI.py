@@ -46,9 +46,8 @@ def handle_get_info_btn_click():
     prg_SA['value'] = poke_info['stats'][3]['base_stat']
     prg_SD['value'] = poke_info['stats'][4]['base_stat']
     prg_Speed['value'] = poke_info['stats'][5]['base_stat']
-    for a in poke_info['types']['type']['name']:
-        lbl_types_values['types']['type']['name'] = f"{a}"
-    lbl_types_values = f"{a}"
+    lbl_types_values['text'] = poke_info['types'][0]['type']['name']
+    
     return
 
 btn_get_info = ttk.Button(frm_top, text='Get Info', command=handle_get_info_btn_click)
