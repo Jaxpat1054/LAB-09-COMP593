@@ -40,14 +40,15 @@ def handle_get_info_btn_click():
     #Populate the info values
     lbl_height_value['text'] = f"{poke_info['height']} dm"
     lbl_weight_value['text'] = f"{poke_info['weight']} hg"
-    #for a in poke_info['abilities']['ability']['name']:
-    #    lbl_types_values['text'] = f"{a}"
     prg_hp['value'] = poke_info['stats'][0]['base_stat']
     prg_attack['value'] = poke_info['stats'][1]['base_stat']
     prg_defense['value'] =  poke_info['stats'][2]['base_stat']
     prg_SA['value'] = poke_info['stats'][3]['base_stat']
     prg_SD['value'] = poke_info['stats'][4]['base_stat']
     prg_Speed['value'] = poke_info['stats'][5]['base_stat']
+    for a in poke_info['types']['type']['name']:
+        lbl_types_values['types']['type']['name'] = f"{a}"
+    lbl_types_values = f"{a}"
     return
 
 btn_get_info = ttk.Button(frm_top, text='Get Info', command=handle_get_info_btn_click)
