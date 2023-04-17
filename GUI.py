@@ -46,9 +46,10 @@ def handle_get_info_btn_click():
     prg_SA['value'] = poke_info['stats'][3]['base_stat']
     prg_SD['value'] = poke_info['stats'][4]['base_stat']
     prg_Speed['value'] = poke_info['stats'][5]['base_stat']
-    lbl_types_values['text'] = poke_info['types'][0]['type']['name']
-    
-    return
+    lbl_types_values['text']  = poke_info['types'][0]['type']['name']
+    lbl_2_types_values['text']  = poke_info['types'][1]['type']['name']
+    #types = [lbl_types_values[0] for lbl_types_values in poke_info['types'][0]['type']['name']]
+    return 
 
 btn_get_info = ttk.Button(frm_top, text='Get Info', command=handle_get_info_btn_click)
 btn_get_info.grid(row=0, column=2)
@@ -69,6 +70,10 @@ lbl_types.grid(row=2, column=0)
 lbl_types_values = ttk.Label(frm_btm_left, text='TBD')
 lbl_types_values.grid(row=2, column=1)
 
+lbl_2_types = ttk.Label(frm_btm_left, text='Types:')
+lbl_2_types.grid(row=2, column=0)
+lbl_2_types_values = ttk.Label(frm_btm_left, text='TBD')
+lbl_2_types_values.grid(row=3, column=1)
 #Add widget to bottom right frame
 lbl_hp = ttk.Label(frm_btm_right, text='HP:')
 lbl_hp.grid(row=1, column=0, sticky=E)
